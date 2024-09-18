@@ -385,11 +385,11 @@ header {
   gap: 10px; /* 버튼 간 간격 */
 }
 .skill-button {
-  padding: 5px 10px;
+  padding: 10px 10px;
   background-color: #007BFF; /* 버튼 색상 */
   color: white; /* 텍스트 색상 */
   border: none;
-  border-radius: 50px; /* 모서리 둥글기 */
+  border-radius: 100px; /* 모서리 둥글기 */
   cursor: pointer; /* 커서 모양 변경 */
   transition: background-color 0.3s; /* 배경색 변경 효과 */
 }

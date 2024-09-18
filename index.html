@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>포트폴리오</title>
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" type="text/css" href="style/jquery.fullpage.css" />
-    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" type="text/css" href="./style/jquery.fullpage.css" />
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
   </head>
 
   <body>
@@ -22,7 +22,7 @@
             백엔드 개발자 <br />
             윤제욱 입니다<span class="white-point">.</span>
           </h1>
-          <p class="date normal">2020.04 ~ 현재</p>
+          <p class="date normal">2020.04 ~ 현재 <span id="work-day"></span></p>
         </div>
       </section>
       <section class="section about black">
@@ -52,7 +52,7 @@
           를 잘해요<span class="black-point">.</span>
         </h2>
         <div class="skill">
-          <div class="value"></div>
+          <div class="value">
             <h3 class="bold">C# (.NET)</h3>
             <p class="explain normal"></p>
               C# 프로젝트 운영 경험이 있습니다. <br />
@@ -105,7 +105,7 @@
               MsSql 운영 경험이 있습니다. (Stored Procedure) <br />
             </p>
           </div>
-          <div class="value"></div>
+          <div class="value">
             <h3 class="bold">Deploy (CI/CD)</h3>
             <p class="explain normal">
               Laravel 배포 환경 구축 및 운영 경험이 있습니다. <br />
@@ -120,22 +120,26 @@
           <span class="black-point">_ _ _ _</span>
           를 사용한 적이 있어요<span class="black-point">.</span>
         </h2>
-        <div class="bold skill button-group">
-            <h3 class="value skill-button">PHP</h3>
-            <h3 class="value skill-button">Laravel</h3>
-            <h3 class="value skill-button">Lumen</h3>
-            <h3 class="value skill-button">Kotlin</h3>
-            <h3 class="value skill-button">Spring Boot</h3>
-            <h3 class="value skill-button">JPA</h3>
-            <h3 class="value skill-button">QueryDSL</h3>
-            <h3 class="value skill-button">JavaScript</h3>
-            <h3 class="value skill-button">JQuery</h3>
-            <h3 class="value skill-button">MySQL</h3>
-            <h3 class="value skill-button">MsSQL</h3>
-            <h3 class="value skill-button">Linux</h3>
-            <h3 class="value skill-button">Docker</h3>
-            <h3 class="value skill-button">Jira</h3>
-            <h3 class="value skill-button">Confluence</h3>
+        <div class="skill">
+          <div class="value">
+            <div class="button-group">
+              <p class="skill-button">PHP</p>
+              <p class="skill-button">Laravel</p>
+              <p class="skill-button">Lumen</p>
+              <p class="skill-button">Kotlin</p>
+              <p class="skill-button">Spring Bootp</p>
+              <p class="skill-button">JPA</p>
+              <p class="skill-button">QueryDSL</p>
+              <p class="skill-button">JavaScript</p>
+              <p class="skill-button">JQuery</p>
+              <p class="skill-button">MySQL</p>
+              <p class="skill-button">MsSQL</p>
+              <p class="skill-button">Linux</p>
+              <p class="skill-button">Docker</p>
+              <p class="skill-button">Jira</p>
+              <p class="skill-button">Confluence</p>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section projects white">
@@ -275,16 +279,6 @@
                 alt="github_logo"
               />
             </a>
-            <a href="" class="logo">
-              <img
-                class="logo"
-                src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8.jpg"
-                alt=""
-              />
-            </a>
-            <a href="" class="logo">
-              <img class="logo" src="images/avatar.svg" alt="" />
-            </a>
           </div>
         </div>
         <div class="contact">
@@ -293,9 +287,7 @@
           </h3>
           <div class="icons">
             <p class="normal">
-              <a href="mailto:sunki33@naver.com" class="e-mail"
-                >sunki33@naver.com</a
-              >
+              <a href="mailto:sunki33@naver.com" class="e-mail">sunki33@naver.com</a>
             </p>
           </div>
         </div>
@@ -306,5 +298,26 @@
     <script type="text/javascript" src="src/jquery.fullpage.js"></script>
     <script src="src/index.js"></script>
     <script src="src/darkmode.js"></script>
+
+    <!-- 스크립트 영역 -->
+    <script>
+        // 시작 날짜
+        const startDate = new Date('2020-04-20');
+        // 오늘 날짜
+        const today = new Date();
+
+        // 연도와 개월 차이 계산
+        let years = today.getFullYear() - startDate.getFullYear();
+        let months = today.getMonth() - startDate.getMonth();
+
+        // 개월 수가 음수인 경우
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        // 결과 출력
+        document.getElementById('work-day').innerText = `(${years}년 ${months}개월)`;
+    </script>
   </body>
 </html>

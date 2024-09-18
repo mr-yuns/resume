@@ -379,11 +379,19 @@ header {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .button-group {
+    font-size: large;
+    line-height: normal;
+  }
+}
+
 .button-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px; /* 버튼 간 간격 */
 }
+
 .skill-button {
   padding: 10px 10px;
   background-color: #007BFF; /* 버튼 색상 */
@@ -393,6 +401,7 @@ header {
   cursor: pointer; /* 커서 모양 변경 */
   transition: background-color 0.3s; /* 배경색 변경 효과 */
 }
+
 .skill-button:hover {
   background-color: #0056b3; /* 호버 시 배경색 */
 }

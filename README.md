@@ -2,18 +2,6 @@
 
 ### 사용기술
 
-- PHP
-- Laravel
-- Lumen
-- Kotlin
-- Spring Boot
-- Jpa
-- QueryDSL
-- JavaScript
-- JQuery
-- MySQL
-- MsSQL
-- Linux
-- Docker
-- Jira
-- Confluence
+- HTML
+- CSS
+- Javascript
